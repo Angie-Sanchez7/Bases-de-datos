@@ -35,7 +35,7 @@ router.post("/", (req, res) => {
         mov_dt_rel,
         mov_rel_country,
     } = req.body;
-    let sql = `insert into movie(mov_title, mov_year, mov_time, mov_lang, mov_dt_rel, mov_rel_country) values('${mov_title}', '${mov_year}', '${mov_time}','${mov_lang}','${mov_dt_rel}','${mov_rel_country}')`;
+    let sql = `insert into movie(mov_title, mov_year, mov_time, mov_lang, mov_dt_rel, mov_rel_country) values('${mov_title}','${mov_year}','${mov_time}','${mov_lang}','${mov_dt_rel}','${mov_rel_country}')`;
     conexion.query(sql, (err, rows, field) => {
         if (err) throw err;
         else {

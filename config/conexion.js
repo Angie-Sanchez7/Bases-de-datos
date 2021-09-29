@@ -1,10 +1,10 @@
 const mysql = require("mysql");
 const conexion = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "tupassword",
+    host: "bitmiyxkwuy54zcxqnfc-mysql.services.clever-cloud.com",
+    user: "ugvw0nyvf2dzcmfh",
+    password: "1VJHylpaMmKqMNtSSFjp",
     port: 3306,
-    database: "movie",
+    database: "bitmiyxkwuy54zcxqnfc",
 });
 
 conexion.connect((err) => {
@@ -14,5 +14,9 @@ conexion.connect((err) => {
         console.log("la base de datos se conecto!!!");
     }
 });
+
+setInterval(function () {
+    conexion.query('SELECT 1');
+}, process.env.PORT || 3000);
 
 module.exports = conexion;
